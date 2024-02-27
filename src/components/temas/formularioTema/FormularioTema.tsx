@@ -49,7 +49,7 @@ function FormularioTema() {
                     }
                 });
 
-                toastAlerta('Tema atualizado com sucesso', 'sucesso')
+                toastAlerta('Tema atualizado com sucesso', 'success')
                 retornar()
 
             } catch (error: any){
@@ -57,7 +57,7 @@ function FormularioTema() {
                     toastAlerta('O token expirou, favor logar novamente', 'info')
                     handleLogout()
                 } else {
-                    toastAlerta('Erro ao atualizar o Tema', 'erro')
+                    toastAlerta('Erro ao atualizar o Tema', 'error')
                 }
             }
         } else {
@@ -68,14 +68,14 @@ function FormularioTema() {
                     }
                 });
 
-                toastAlerta('Tema cadastrado com sucesso', 'sucesso')
+                toastAlerta('Tema cadastrado com sucesso', 'success')
 
             } catch (error: any) {
                 if(error.toString().includes('403')) {
                     toastAlerta('O token expirou, favor logar novamente', 'info')
                     handleLogout()
                 } else {
-                    toastAlerta('Erro ao cadastrar o Tema', 'erro')
+                    toastAlerta('Erro ao cadastrar o Tema', 'error')
                 }
             }
         }

@@ -17,11 +17,26 @@ import Perfil from './paginas/perfil/Perfil';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+const contextClass = {
+  success: "bg-blue-600",
+  error: "bg-red-600",
+  info: "bg-purple-400",
+  warning: "bg-orange-400",
+  default: "bg-indigo-600",
+  colored: "bg-white-600 font-purple-500",
+};
+
 function App() {
   return (
     <>
       <AuthProvider>
-      <ToastContainer />
+      <ToastContainer toastClassName={(context) =>
+          contextClass[context?.type || "default"] +
+          " relative flex p-1 min-h-10 rounded-md justify-between overflow-hidden cursor-pointer"
+        }
+        bodyClassName={() => "text-sm font-white font-med block p-3"}
+        position="bottom-left"
+        autoClose={3000} />
         <BrowserRouter>
           <Navbar />
           <div className='min-h-[80vh]'>

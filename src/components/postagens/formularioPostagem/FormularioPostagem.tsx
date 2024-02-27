@@ -103,14 +103,14 @@ function FormularioPostagem() {
             Authorization: token,
           },
         });
-        toastAlerta('Postagem atualizada com sucesso', 'sucesso');
+        toastAlerta('Postagem atualizada com sucesso', 'success');
         retornar();
       } catch (error: any) {
         if (error.toString().includes('403')) {
           toastAlerta('O token expirou, favor logar novamente', 'info')
           handleLogout()
         } else {
-          toastAlerta('Erro ao atualizar a Postagem', 'erro');
+          toastAlerta('Erro ao atualizar a Postagem', 'error');
         }
       }
     } else {
@@ -121,14 +121,14 @@ function FormularioPostagem() {
           },
         });
 
-        toastAlerta('Postagem cadastrada com sucesso', 'sucesso');
+        toastAlerta('Postagem cadastrada com sucesso', 'success');
         retornar();
       } catch (error: any) {
         if (error.toString().includes('403')) {
           toastAlerta('O token expirou, favor logar novamente', 'info')
           handleLogout()
         } else {
-          toastAlerta('Erro ao cadastrar a Postagem', 'erro');
+          toastAlerta('Erro ao cadastrar a Postagem', 'error');
         }
       }
     }
