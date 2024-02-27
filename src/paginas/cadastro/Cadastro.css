@@ -1,0 +1,8 @@
+.fundoCadastro {
+    background-image: url("https://img.freepik.com/fotos-gratis/visao-aerea-de-artigos-de-papelaria-e-laptop-no-fundo-bege_23-2147879802.jpg?size=626&ext=jpg&ga=GA1.1.1521454148.1693082830&semt=ais");
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 100vh;
+      background-size: cover;
+      background-position: center;
+  }
